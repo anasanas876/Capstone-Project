@@ -1,0 +1,31 @@
+# Environment variables (Crucial for security!)
+*.env
+*.env.local
+*.env.*.local
+.env*
+
+# Node / Next.js (Crucial: Prevents large file error on GitHub)
+node_modules/
+**/node_modules/
+.next/
+**/.next/
+out/
+**/out/
+*.node
+
+# Python / Django
+__pycache__/
+**/__pycache__/
+*.py[cod]
+*$py.class
+*.sqlite3
+staticfiles/
+**/staticfiles/
+media/
+**/media/
+
+# System / IDE
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
