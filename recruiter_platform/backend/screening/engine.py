@@ -432,7 +432,7 @@ def extract_skills(sections, job):
         "missing": sorted(missing),
     }
 
-
+# Weights can be dynamically provided by the recruiters. If they do not ptovide, system uses default weights, skills=40, experience=40, keywords=20
 def calculate_experience_score(entries, job):
     max_points = job["weights"]["experience"]
     jd_experience = job["experience"]
@@ -453,7 +453,7 @@ def calculate_experience_score(entries, job):
         except ValueError:
             similarity = 0.0
     else:
-        # Exact mathematical equivalent for single-document corpus TF-IDF cosine similarity:
+        
         words_jd = re.findall(r"\b\w+\b", jd_experience.lower())
         words_res = re.findall(r"\b\w+\b", resume_experience.lower())
         if not words_jd or not words_res:
